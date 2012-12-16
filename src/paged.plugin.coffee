@@ -132,7 +132,7 @@ module.exports = (BasePlugin) ->
 
 			@pagesToRender = pagesToRender
 
-			return tasks.async()
+			return tasks.sync()
 
 		renderAfter: (opts,next) ->
 			docpad = @docpad
@@ -151,6 +151,6 @@ module.exports = (BasePlugin) ->
 						document.writeRendered(complete)
 
 
-				return tasks.async()
+				return tasks.sync()
 			else
 				next();
